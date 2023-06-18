@@ -1,0 +1,46 @@
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+.quote-box {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #333;
+  text-align: center;
+  background-color: #fff;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+.color-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.color-btn {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+#color-btn1 {
+  background-color: #ff6347;
+}
+
+#color-btn2 {
+  background-color: #40e0d0;
+}
+
+#color-btn3 {
+  background-color: #9370db;
+}
+
+#color-btn4 {
+  background-color: #ffd700;
+}

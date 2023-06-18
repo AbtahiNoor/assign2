@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number Analysis</title>
+  <link rel="stylesheet" type="text/css" href="styles_2.css">
+  <script>
+    function analyzeNumbers() {
+      var numbersInput = document.getElementById("numbers").value;
+      var numbersArray = numbersInput.split(",").map(Number);
+      
+      var max = Math.max.apply(null, numbersArray);
+      var min = Math.min.apply(null, numbersArray);
+      var sum = numbersArray.reduce((a, b) => a + b, 0);
+      var average = sum / numbersArray.length;
+      var reverseOrder = numbersArray.slice().reverse();
+      
+      document.getElementById("max").textContent = max;
+      document.getElementById("min").textContent = min;
+      document.getElementById("sum").textContent = sum;
+      document.getElementById("average").textContent = average;
+      document.getElementById("reverse").textContent = reverseOrder.join(", ");
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      var numbersInput = document.getElementById("numbers");
+      
+      numbersInput.addEventListener('input', function() {
+        analyzeNumbers();
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>Number Analysis</h1>
+  <form>
+    <label for="numbers">Enter a series of numbers separated by commas:</label>
+    <input type="text" id="numbers">
+  </form>
+  <h2>Analysis Results:</h2>
+  <p>Maximum: <span id="max"></span></p>
+  <p>Minimum: <span id="min"></span></p>
+  <p>Sum: <span id="sum"></span></p>
+  <p>Average: <span id="average"></span></p>
+  <p>Reverse Order: <span id="reverse"></span></p>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weight Conversion - Stylish</title>
+  <link rel="stylesheet" type="text/css" href="styles_1.2.css">
+  <script src="script_1.2.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Weight Conversion Calculator </h1>
+    
+    <label for="weight">Weight:</label>
+    <input type="text" id="weightInput">
+    
+    <label for="conversion">Conversion:</label>
+    <select id="conversionSelect">
+      <option value="kgToLb">Kilograms(kg) to Pounds(lb)</option>
+      <option value="lbToKg">Pounds(lb) to Kilograms(kg)</option>
+    </select>
+    
+    <button onclick="convert()">Convert</button>
+    
+    <p>Result is: <span id="resultSpan"></span></p>
+  </div>
+</body>
+</html>
